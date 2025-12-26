@@ -1,3 +1,13 @@
 # Hier pakkende titel invoeren
 
-# welkoms tekstje?
+# Inleiding
+
+# Inhoudsopgave
+
+# Structuur
+
+# Methode
+
+# Resultaten
+
+# Conclusie
