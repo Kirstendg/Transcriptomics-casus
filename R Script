@@ -1,1 +1,124 @@
+# Working directory instellen
+setwd("C:/Users/kirst/OneDrive - Van Hall Larenstein/J2P4 Moderne DNA-technologiën/Transcriptomics/")
 
+# BiocManager aanzetten
+library(BiocManager)
+# Instaleren & aanzetten van Rsubread
+BiocManager::install("Rsubread")
+library(Rsubread)
+
+# Referentie genoom indexeren
+buildindex( basename = 'ref_humaan', reference = "C:/Users/kirst/OneDrive - Van Hall Larenstein/J2P4 Moderne DNA-technologiën/Transcriptomics/uitgepakte_casus_data/uitgepakt_dataset_humaan_genoom/ncbi_dataset/data/GCF_000001405.40/GCF_000001405.40_GRCh38.p14_genomic.fna", memory = 4000, indexSplit = TRUE)
+
+# Samples mappen tegen humane referentie genoom
+align.nor1 <- align(index = "C:/Users/kirst/OneDrive - Van Hall Larenstein/J2P4 Moderne DNA-technologiën/Transcriptomics/uitgepakte_casus_data/uitgepakt_dataset_humaan_genoom/ncbi_dataset/data/GCF_000001405.40/ref_humaan", readfile1 = "SRR4785819_1_subset40k.fastq", readfile2 = "SRR4785819_2_subset40k.fastq", output_file = "nor1.BAM")
+align.nor2 <- align(index = "C:/Users/kirst/OneDrive - Van Hall Larenstein/J2P4 Moderne DNA-technologiën/Transcriptomics/uitgepakte_casus_data/uitgepakt_dataset_humaan_genoom/ncbi_dataset/data/GCF_000001405.40/ref_humaan", readfile1 = "SRR4785820_1_subset40k.fastq", readfile2 = "SRR4785820_2_subset40k.fastq", output_file = "nor2.BAM")
+align.nor3 <- align(index = "C:/Users/kirst/OneDrive - Van Hall Larenstein/J2P4 Moderne DNA-technologiën/Transcriptomics/uitgepakte_casus_data/uitgepakt_dataset_humaan_genoom/ncbi_dataset/data/GCF_000001405.40/ref_humaan", readfile1 = "SRR4785828_1_subset40k.fastq", readfile2 = "SRR4785828_2_subset40k.fastq", output_file = "nor3.BAM")
+align.nor4 <- align(index = "C:/Users/kirst/OneDrive - Van Hall Larenstein/J2P4 Moderne DNA-technologiën/Transcriptomics/uitgepakte_casus_data/uitgepakt_dataset_humaan_genoom/ncbi_dataset/data/GCF_000001405.40/ref_humaan", readfile1 = "SRR4785831_1_subset40k.fastq", readfile2 = "SRR4785831_2_subset40k.fastq", output_file = "nor4.BAM")
+
+align.z1 <- align(index = "C:/Users/kirst/OneDrive - Van Hall Larenstein/J2P4 Moderne DNA-technologiën/Transcriptomics/uitgepakte_casus_data/uitgepakt_dataset_humaan_genoom/ncbi_dataset/data/GCF_000001405.40/ref_humaan", readfile1 = "SRR4785979_1_subset40k.fastq", readfile2 = "SRR4785979_2_subset40k.fastq", output_file = "ziek1.BAM")
+align.z2 <- align(index = "C:/Users/kirst/OneDrive - Van Hall Larenstein/J2P4 Moderne DNA-technologiën/Transcriptomics/uitgepakte_casus_data/uitgepakt_dataset_humaan_genoom/ncbi_dataset/data/GCF_000001405.40/ref_humaan", readfile1 = "SRR4785980_1_subset40k.fastq", readfile2 = "SRR4785980_2_subset40k.fastq", output_file = "ziek2.BAM")
+align.z3 <- align(index = "C:/Users/kirst/OneDrive - Van Hall Larenstein/J2P4 Moderne DNA-technologiën/Transcriptomics/uitgepakte_casus_data/uitgepakt_dataset_humaan_genoom/ncbi_dataset/data/GCF_000001405.40/ref_humaan", readfile1 = "SRR4785986_1_subset40k.fastq", readfile2 = "SRR4785986_2_subset40k.fastq", output_file = "ziek3.BAM")
+align.z4 <- align(index = "C:/Users/kirst/OneDrive - Van Hall Larenstein/J2P4 Moderne DNA-technologiën/Transcriptomics/uitgepakte_casus_data/uitgepakt_dataset_humaan_genoom/ncbi_dataset/data/GCF_000001405.40/ref_humaan", readfile1 = "SRR4785988_1_subset40k.fastq", readfile2 = "SRR4785988_2_subset40k.fastq", output_file = "ziek4.BAM")
+
+# EINDE MAPPING
+
+# Benodigde packages inladen
+library(readr)
+library(dplyr)
+library(Rsamtools)
+
+# Vector maken met namen en BAM bestanden
+samples <- c("uitgepakte_casus_data/Data_RA_raw/nor1.BAM" , "uitgepakte_casus_data/Data_RA_raw/nor2.BAM", 
+             "uitgepakte_casus_data/Data_RA_raw/nor3.BAM", "uitgepakte_casus_data/Data_RA_raw/nor4.BAM", 
+             "uitgepakte_casus_data/Data_RA_raw/ziek1.BAM", "uitgepakte_casus_data/Data_RA_raw/ziek2.BAM", 
+             "uitgepakte_casus_data/Data_RA_raw/ziek3.BAM", "uitgepakte_casus_data/Data_RA_raw/ziek4.BAM")
+
+# Count matrix maken
+count_matrix <- featureCounts(
+  files = samples,
+  annot.ext = "uitgepakte_casus_data/ncbi_humaan_GTF/ncbi_dataset/data/GCF_000001405.40/genomic.gtf",
+  isPairedEnd = TRUE,
+  isGTFAnnotationFile = TRUE,
+  GTF.attrType = "gene_id",
+  useMetaFeatures = TRUE)
+
+# Count matrix inladen
+read.table("C:/Users/kirst/OneDrive - Van Hall Larenstein/J2P4 Moderne DNA-technologiën/Transcriptomics/count_matrix.txt")
+CM <- read.table ("C:/Users/kirst/OneDrive - Van Hall Larenstein/J2P4 Moderne DNA-technologiën/Transcriptomics/count_matrix.txt") 
+
+# Tabel maken met overzicht zieke en gezonde mensen
+Behandeling <- c("Normaal", "Normaal", "Normaal", "Normaal", "Ziek", "Ziek", "Ziek", "Ziek")
+Behandeling_tabel <- data.frame(Behandeling = Behandeling)
+colnames(Behandeling_tabel) <- c('nor1', 'nor2', 'nor3', 'nor4', 'ziek1', 'ziek2', 'ziek3', 'ziek4')
+rownames(Behandeling_tabel) <- colnames(CM)
+
+# Benodigde packages voor genexpressie aanzetten
+library(DESeq2)
+library(KEGGREST)
+
+# Maak DESeqDataSet aan
+  dds <- DESeqDataSetFromMatrix(countData = round(CM),
+                                colData = Behandeling_tabel,
+                                design = ~ Behandeling)
+
+# Voer analyse uit
+dds <- DESeq(dds)
+resultaten <- results(dds)
+
+# Resultaten opslaan in een bestand
+# Bij het opslaan van je tabel kan je opnieuw je pad instellen met `setwd()` of het gehele pad waar je de tabel wilt opslaan opgeven in de code.
+
+write.table(resultaten, file = ("C:/Users/kirst/OneDrive - Van Hall Larenstein/J2P4 Moderne DNA-technologiën/Transcriptomics/'resultaten.csv'"), row.names = TRUE, col.names = TRUE)
+
+# Bepalen hoeveel genen er daadwerkelijk veranderen, dit met significantie
+sum(resultaten$padj < 0.05 & resultaten$log2FoldChange > 1, na.rm = TRUE)
+sum(resultaten$padj < 0.05 & resultaten$log2FoldChange < -1, na.rm = TRUE)
+
+# Sorteren van resultaat naar opvallendste genen
+hoogste_fold_change <- resultaten[order(resultaten$log2FoldChange, decreasing = TRUE), ]
+laagste_fold_change <- resultaten[order(resultaten$log2FoldChange, decreasing = FALSE), ]
+laagste_p_waarde <- resultaten[order(resultaten$padj, decreasing = FALSE), ]
+
+# Genen die het belangrijkst zijn volgens de analyse
+head(laagste_p_waarde)
+
+# Package installeren en aanzetten voor volcano plot
+BiocManager::install("EnhancedVolcano")
+library(EnhancedVolcano)
+
+EnhancedVolcano(resultaten,
+                lab = rownames(resultaten),
+                x = 'log2FoldChange',
+                y = 'padj')
+
+# Alternatieve plot zonder p-waarde cutoff (alle genen zichtbaar)
+EnhancedVolcano(resultaten,
+                lab = rownames(resultaten),
+                x = 'log2FoldChange',
+                y = 'padj',
+                pCutoff = 0)
+
+# Volcano plot opslaan
+dev.copy(png, 'Volcanoplot2.png', 
+         width = 8,
+         height = 10,
+         units = 'in',
+         res = 500)
+dev.off()
+
+# Installeer pathview package en zet aan
+BiocManager::install("pathview")
+library(pathview)
+
+# Visualiseren KEGG pathway
+resultaten[1] <- NULL
+resultaten[2:5] <- NULL
+
+pathview(
+  gene.data = resultaten,
+  pathway.id = "hsa05323",  # KEGG ID voor Biofilm formation – E. coli
+  species = "hsa",          # 'eco' = E. coli in KEGG
+  gene.idtype = "SYMBOL",     # Geef aan dat het KEGG-ID's zijn
+  limit = list(gene = 5)    # Kleurbereik voor log2FC van -5 tot +5
+  )
