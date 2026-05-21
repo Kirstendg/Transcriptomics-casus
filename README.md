@@ -17,7 +17,7 @@ Langdurige onbehandelde RA kan lijden tot gewrichtsmisvormingen, functieverlies,
 # 2. Methode
 
 `Figuur 2; Flowchart`
-<img width="632" height="632" alt="Flowchart transcriptomics casus RA" src="https://github.com/user-attachments/assets/d8382976-e858-4706-973e-79095677d853" />
+<img width="2636" height="632" alt="Flowchart transcriptomics casus RA" src="https://github.com/user-attachments/assets/d8382976-e858-4706-973e-79095677d853" />
 
 
 # 3. Resultaten
