@@ -17,16 +17,16 @@ Langdurige onbehandelde RA kan lijden tot gewrichtsmisvormingen, functieverlies,
 # 2. Methode
 
 `Figuur 2; Flowchart`
-<img width="2636" height="740" alt="Flowchart transcriptomics casus RA" src="https://github.com/user-attachments/assets/d8382976-e858-4706-973e-79095677d853" />
+<img width="632" height="632" alt="Flowchart transcriptomics casus RA" src="https://github.com/user-attachments/assets/d8382976-e858-4706-973e-79095677d853" />
 
 
 # 3. Resultaten
 
 `Figuur 3;`
-<img width="4000" height="5000" alt="Correcte Volcanoplot2" src="https://github.com/user-attachments/assets/8b3924f8-55a8-4c68-8f7b-fe303e977dbb" />
+<img width="632" height="632" alt="Correcte Volcanoplot2" src="https://github.com/user-attachments/assets/8b3924f8-55a8-4c68-8f7b-fe303e977dbb" />
 
 `Figuur 4; KEGG pathway voor Reumatoïde Artitis (RA) gerendeerd met Pathview package in R-studio. Zichtbaar zijn alle betrokken genen bij RA. Bij een verhoogde differentiële expressie, zie IL6, ILS of MMP1/3, zijn de genen rood gekleurd. Bij een verlaagde differentiële expressie, zie VEGF, API en IL17, zijn de genen groen gekleurd. Bij geen verschil grijs.` 
-<img width="1492" height="859" alt="Correcte pathview" src="https://github.com/user-attachments/assets/3e24040c-4504-4d3d-b974-85c7d4e2fb47" />
+<img width="632" height="632" alt="Correcte pathview" src="https://github.com/user-attachments/assets/3e24040c-4504-4d3d-b974-85c7d4e2fb47" />
 # 4. Conclusie
 
 # 5. Beheer
