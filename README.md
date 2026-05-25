@@ -16,7 +16,7 @@ Langdurige onbehandelde RA kan lijden tot gewrichtsmisvormingen, functieverlies,
 
 # 2. Methode
 
-`Figuur 2; Flowchart`
+`Figuur 2; Flowchart gemaakt met Lucidchart (Diagram Software | Lucidchart, n.d.). Synoviumbiopt is uitgevoerd op vier patiënten met RA en vier gezonde patiënten. Hieruit is DNA geïsoleerd en RNA sequencing uitgevoerd om RNA-seq-data te verkrijgen. Hiernaast is het humane referentie genoom verkregen via de NCBI databank, waarna deze is geïndexeerd (National Center for Biotechnology Information, n.d.). Samples zijn gemapt tegen het geïndexeerde genoom. Reads per gen kwantificeert met BAM-files van alle patiënten en het humane GTF-file. Count matrix is gemaakt en vervolgens statistische analyses uitgevoerd (KEGG pathway, Volcano plot en GO analyse).`
 <img width="2636" height="632" alt="Flowchart transcriptomics casus RA" src="https://github.com/user-attachments/assets/d8382976-e858-4706-973e-79095677d853" />
 
 
@@ -29,6 +29,11 @@ Langdurige onbehandelde RA kan lijden tot gewrichtsmisvormingen, functieverlies,
 `Figuur 4; KEGG pathway voor Reumatoïde Artitis (RA) gerendeerd met Pathview package in R-studio. Zichtbaar zijn alle betrokken genen bij RA. Bij een verhoogde differentiële expressie, zie IL6, ILS of MMP1/3, zijn de genen rood gekleurd. Bij een verlaagde differentiële expressie, zie VEGF, API en IL17, zijn de genen groen gekleurd. Bij geen verschil grijs.` 
 
 <img width="1492" height="632" alt="Correcte pathview" src="https://github.com/user-attachments/assets/3e24040c-4504-4d3d-b974-85c7d4e2fb47" />
+
+`Figuur 5; Puntdiagram van de uitgevoerde GO-enrichment resultaten. Zichtbaar op de x-as is het percentage Hits van de gedetecteerde top 10 gen ID’s per GO-term. Aangegeven op de y-as staan de GO-termen, hierbij is de grootte van de punten in samenhang met het aantal genen. De kleur van ieder punt is de p-waarde, hoe donkerder hoe significanter. Hoe hoger een GO-term hoe significanter deze tot expressie komt.` 
+
+<img width="738" height="341" alt="GO analyse plot" src="https://github.com/user-attachments/assets/8e66ff42-615c-43fa-9028-b63aea5c0502" />
+
 
 # 4. Conclusie
 
