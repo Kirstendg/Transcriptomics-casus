@@ -26,6 +26,8 @@ Differentiële genexpressie is uitgevoerd met DESeq2, hieruit volgde data van 29
 
 Volcano plot is gebruikt voor de visualisatie van de differentiële genexpressie. Rood geeft up regulatie aan en groen down regulatie, zie figuur 3. Grijs heeft geen significante genexpressie. Zichtbaar zijn ANKRD30BL, MT-ND6 en SLC9AR2 zeer significante up regulatie mogelijk betrokken bij zichtbeeld van RA, zie figuur 3.
 
+KEGG pathway met pathview is gebruikt voor visualisatie van de betrokken eiwitten bij immuun responses met RA. Verhoogde expressie van IL6, IL1β en onder andere IL8 geeft inflammatie van de gewrichten, zie figuur 4. Verder is MMP1/3 verhoogd wat gewricht destructie kan zorgen, zie figuur 4.
+
 De GO-analyse liet zien dat de tien meest significante gereguleerde genen betrokken zijn bij: chronische immuun activatie, versterkte signaalroutes, metabolisme, eiwit binding onderandere receptoren, oxidatieve stress, verhoogde cytokineproductie, inflammasomen en antigeen presentatie, zie figuur 5 en tabel https://github.com/Kirstendg/Transcriptomics-casus/blob/main/Resultaten/GO_analyse.xlsx. Dit zijn allemaal bekende symptomen bij RA. 
 
 `Figuur 3; Volcano plot van differentiële genexpressie gemaakt met behulp van het EnhancedVolcano package in R-studio. Dit op basis van 29407 variabelen. Weergegeven op de x-as is de Log2 fold change en op de y-as -log10 P. Hierbij zijn de drempels en geselecteerde genlabels zichtbaar. De grijs gekleurde genen hebben geen statisch significante differentiële genexpressie. De rood gekleurde genen hebben een hoge statistische significantie en zijn sterk verhoogd. Alle groen gekleurde genen zijn niet statistisch relevant volgens de gestelde eisen.`
