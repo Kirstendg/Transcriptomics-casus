@@ -22,7 +22,7 @@ Synoviumbiopten van vier patiënten met reumatoïde artritis (RA) en vier contro
 
 
 # 3. Resultaten
-Differentiële genexpressie is uitgevoerd met DESeq2, hieruit volgde data van 29407 genen. Dit in verhouding van patiënten met RA en gezond. Voor visualisatie en het KEGG pathway is een Log2 fold change van 1 en gecorrigeerde p-waarde van 0,05 aangehouden, zie R script.
+Differentiële genexpressie is uitgevoerd met DESeq2, hieruit volgde data van 29407 genen. Dit in verhouding van patiënten met RA en gezond. Voor visualisatie en het KEGG pathway is een Log2 fold change van 1 en gecorrigeerde p-waarde van 0,05 aangehouden, zie R script. Dit resulteerde in 2085 significante omhoog gereguleerde genen en 2487 omlaag gereguleerde genen.
 
 De GO-analyse liet zien dat de tien meest significante gereguleerde genen betrokken zijn bij: chronische immuun activatie, versterkte signaalroutes, metabolisme, eiwit binding onderandere receptoren, oxidatieve stress, verhoogde cytokineproductie, inflammasomen en antigeen presentatie, zie figuur 5 en tabel https://github.com/Kirstendg/Transcriptomics-casus/blob/main/Resultaten/GO_analyse.xlsx. Dit zijn allemaal bekende symptomen bij RA. 
 
