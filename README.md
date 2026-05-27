@@ -51,4 +51,7 @@ Uit analyse zijn 29407 genen geïdentificeerd, waarvan 2085 significant omhoog e
 De gekozen drempels voor log2 fold change en padj kunnen het aantal significante genen beïnvloeden. Verdere bijdrage aan de validiteit van de gegevens is de steekproef grootte. Door het beperkte aantal samples kan de relevantie van de gevonden verschillen ter discussie staan. Daarom wordt aanbevolen de steekproef te vergroten en variatie in drempelkeuzes te onderzoeken.
 
 ## 5. Beheer
+Github is gebruikt voor het overzichtelijk te houden van gebruikte script, packages en versies van de packages, zie R Script en Bronnen. Dit draagt allemaal bij aan het transparant houden en de reproduceerbaarheid van de data gebruikt tijdens de transcriptomics casus.
+
+Daarnaast is er nog een document aangemaakt waarin duidelijk word hoe de rol van Data Stewardship is toegepast in deze casus. Hierin worden bepaalde keuzes toegelicht, dit is te vinden onder Data Stewardship.
  
