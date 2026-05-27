@@ -32,7 +32,7 @@ De GO-analyse liet zien dat de tien meest significante gereguleerde genen betrok
 
 <img width="632" height="632" alt="Correcte Volcanoplot2" src="https://github.com/user-attachments/assets/8b3924f8-55a8-4c68-8f7b-fe303e977dbb" />
 
-`Figuur 4; KEGG pathway voor Reumatoïde Artitis (RA) gerendeerd met Pathview package in R-studio. Zichtbaar zijn alle betrokken genen bij RA. Bij een verhoogde differentiële expressie, zie IL6, ILS of MMP1/3, zijn de genen rood gekleurd. Bij een verlaagde differentiële expressie, zie VEGF, API en IL17, zijn de genen groen gekleurd. Bij geen verschil grijs.` 
+`Figuur 4; KEGG pathway voor Reumatoïde Artitis (RA) gerendeerd met Pathview package in R-studio. Zichtbaar zijn alle betrokken eiwitten bij RA. Bij een verhoogde differentiële expressie, zie IL6, ILS of MMP1/3, zijn de eiwitten rood gekleurd. Bij een verlaagde differentiële expressie, zie VEGF, API en IL17, zijn de eiwitten groen gekleurd. Bij geen verschil grijs.` 
 
 <img width="1492" height="632" alt="Correcte pathview" src="https://github.com/user-attachments/assets/3e24040c-4504-4d3d-b974-85c7d4e2fb47" />
 
