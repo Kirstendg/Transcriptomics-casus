@@ -22,12 +22,19 @@ Synoviumbiopten van vier patiënten met reumatoïde artritis (RA) en vier contro
 
 
 # 3. Resultaten
+Differentiële genexpressie is uitgevoerd met DESeq2, hieruit volgde data van 29407 genen. Dit in verhouding van patiënten met RA en gezond. Voor visualisatie en het KEGG pathway is een Log2 fold change van 1 en gecorrigeerde p-waarde van 0,05 aangehouden, zie R script. Dit resulteerde in 2085 significante omhoog gereguleerde genen en 2487 omlaag gereguleerde genen.
+
+Volcano plot is gebruikt voor de visualisatie van de differentiële genexpressie. Rood geeft up regulatie aan en groen down regulatie, zie figuur 3. Grijs heeft geen significante genexpressie. Zichtbaar zijn ANKRD30BL, MT-ND6 en SLC9AR2 zeer significante up regulatie mogelijk betrokken bij zichtbeeld van RA, zie figuur 3.
+
+KEGG pathway met pathview is gebruikt voor visualisatie van de betrokken eiwitten bij immuun responses met RA. Verhoogde expressie van IL6, IL1β en onder andere IL8 geeft inflammatie van de gewrichten, zie figuur 4. Verder is MMP1/3 verhoogd wat gewricht destructie kan zorgen, zie figuur 4.
+
+De GO-analyse liet zien dat de tien meest significante gereguleerde genen betrokken zijn bij: chronische immuun activatie, versterkte signaalroutes, metabolisme, eiwit binding onderandere receptoren, oxidatieve stress, verhoogde cytokineproductie, inflammasomen en antigeen presentatie, zie figuur 5 en tabel https://github.com/Kirstendg/Transcriptomics-casus/blob/main/Resultaten/GO_analyse.xlsx. Dit zijn allemaal bekende symptomen bij RA. 
 
 `Figuur 3; Volcano plot van differentiële genexpressie gemaakt met behulp van het EnhancedVolcano package in R-studio. Dit op basis van 29407 variabelen. Weergegeven op de x-as is de Log2 fold change en op de y-as -log10 P. Hierbij zijn de drempels en geselecteerde genlabels zichtbaar. De grijs gekleurde genen hebben geen statisch significante differentiële genexpressie. De rood gekleurde genen hebben een hoge statistische significantie en zijn sterk verhoogd. Alle groen gekleurde genen zijn niet statistisch relevant volgens de gestelde eisen.`
 
 <img width="632" height="632" alt="Correcte Volcanoplot2" src="https://github.com/user-attachments/assets/8b3924f8-55a8-4c68-8f7b-fe303e977dbb" />
 
-`Figuur 4; KEGG pathway voor Reumatoïde Artitis (RA) gerendeerd met Pathview package in R-studio. Zichtbaar zijn alle betrokken genen bij RA. Bij een verhoogde differentiële expressie, zie IL6, ILS of MMP1/3, zijn de genen rood gekleurd. Bij een verlaagde differentiële expressie, zie VEGF, API en IL17, zijn de genen groen gekleurd. Bij geen verschil grijs.` 
+`Figuur 4; KEGG pathway voor Reumatoïde Artitis (RA) gerendeerd met Pathview package in R-studio. Zichtbaar zijn alle betrokken eiwitten en enzymen bij RA. Bij een verhoogde differentiële expressie, zie IL6, ILS of MMP1/3, zijn de eiwitten en enzymen rood gekleurd. Bij een verlaagde differentiële expressie, zie VEGF, API en IL17, zijn de eiwitten en enzymen groen gekleurd. Bij geen verschil grijs.` 
 
 <img width="1492" height="632" alt="Correcte pathview" src="https://github.com/user-attachments/assets/3e24040c-4504-4d3d-b974-85c7d4e2fb47" />
 
@@ -37,6 +44,9 @@ Synoviumbiopten van vier patiënten met reumatoïde artritis (RA) en vier contro
 
 
 # 4. Conclusie
+Reumatoïde Artritis (RA) is een chronische auto-immuunziekte dat pijn, irritatie en ontsteking van de gewrichten veroorzaakt, er is nog geen genezing (Chauhan et al., 2023). Transcriptomics kan hier een waardevolle bijdrage aanleveren. In dit onderzoek zijn biopten genomen van vier patiënten met RA en vier gezonde controles. Nadat het aantal genen was gekwantificeerd, zijn drie statistische analyses uitgevoerd om inzicht te geven in de ziekteprocessen van RA.
+Uit analyse zijn 29407 genen geïdentificeerd, waarvan 2085 significant omhoog en 2487 significant omlaag gereguleerd waren. Na visualisatie met Volcano-plot zijn ANKRD30BL, MT-ND6 & SLC9A3R2 benadrukt met mogelijke bijdragen aan RA. KEGG- en GO-analyse tonen versterkte immuunresponsen en ontstekingsroutes, met verhoogde expressie van cytokinen IL6, IL1β en IL8 (Alturaiki et al., 2022). Verder is MMP1/3 geassocieerd met schade aan gewrichten (Green et al., 2003). De top tien gevisualiseerde GO-termen komen overeen met bekende mechanismen van RA.
+De gekozen drempels voor log2 fold change en padj kunnen het aantal significante genen beïnvloeden. Verdere bijdrage aan de validiteit van de gegevens is de steekproef grootte. Door het beperkte aantal samples kan de relevantie van de gevonden verschillen ter discussie staan. Daarom wordt aanbevolen de steekproef te vergroten en variatie in drempelkeuzes te onderzoeken.
 
 # 5. Beheer
  
