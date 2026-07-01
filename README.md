@@ -45,21 +45,21 @@ Differentiële genexpressie is uitgevoerd met DESeq2, hieruit volgde data van 29
 
 Volcano plot is gebruikt voor de visualisatie van de differentiële genexpressie. Rood geeft up regulatie aan en groen down regulatie, zie figuur 3. Grijs heeft geen significante genexpressie. Zichtbaar zijn ANKRD30BL, MT-ND6 en SLC9AR2 zeer significante up regulatie mogelijk betrokken bij zichtbeeld van RA, zie figuur 3.
 
-KEGG pathway met pathview is gebruikt voor visualisatie van de betrokken eiwitten bij immuun responses met RA. Verhoogde expressie van IL6, IL1β en onder andere IL8 geeft inflammatie van de gewrichten, zie figuur 4. Verder is MMP1/3 verhoogd wat gewricht destructie kan zorgen, zie figuur 4.
+De GO-analyse liet zien dat de tien meest significante gereguleerde genen betrokken zijn bij: chronische immuun activatie, versterkte signaalroutes, metabolisme, eiwit binding onderandere receptoren, oxidatieve stress, verhoogde cytokineproductie, inflammasomen en antigeen presentatie, zie figuur 4 en tabel https://github.com/Kirstendg/Transcriptomics-casus/blob/main/Resultaten/GO_analyse.xlsx. Dit zijn allemaal bekende symptomen bij RA. 
 
-De GO-analyse liet zien dat de tien meest significante gereguleerde genen betrokken zijn bij: chronische immuun activatie, versterkte signaalroutes, metabolisme, eiwit binding onderandere receptoren, oxidatieve stress, verhoogde cytokineproductie, inflammasomen en antigeen presentatie, zie figuur 5 en tabel https://github.com/Kirstendg/Transcriptomics-casus/blob/main/Resultaten/GO_analyse.xlsx. Dit zijn allemaal bekende symptomen bij RA. 
+KEGG pathway met pathview is gebruikt voor visualisatie van de betrokken eiwitten bij immuun responses met RA. Verhoogde expressie van IL6, IL1β en onder andere IL8 geeft inflammatie van de gewrichten, zie figuur 4. Verder is MMP1/3 verhoogd wat gewricht destructie kan zorgen, zie figuur 5.
 
 <img width="632" height="632" alt="Correcte Volcanoplot2" src="https://github.com/user-attachments/assets/8b3924f8-55a8-4c68-8f7b-fe303e977dbb" />
 
 `Figuur 3; Volcano plot van differentiële genexpressie gemaakt met behulp van het EnhancedVolcano package in R-studio. Dit op basis van 29407 variabelen. Weergegeven op de x-as is de Log2 fold change en op de y-as -log10 P. Hierbij zijn de drempels en geselecteerde genlabels zichtbaar. De grijs gekleurde genen hebben geen statisch significante differentiële genexpressie. De rood gekleurde genen hebben een hoge statistische significantie en zijn sterk verhoogd. Alle groen gekleurde genen zijn niet statistisch relevant volgens de gestelde eisen.`
 
-<img width="1492" height="632" alt="Correcte pathview" src="https://github.com/user-attachments/assets/3e24040c-4504-4d3d-b974-85c7d4e2fb47" />
-
-`Figuur 4; KEGG pathway voor Reumatoïde Artitis (RA) gerendeerd met Pathview package in R-studio. Zichtbaar zijn alle betrokken eiwitten en enzymen bij RA. Bij een verhoogde differentiële expressie, zie IL6, ILS of MMP1/3, zijn de eiwitten en enzymen rood gekleurd. Bij een verlaagde differentiële expressie, zie VEGF, API en IL17, zijn de eiwitten en enzymen groen gekleurd. Bij geen verschil grijs.`
-
 <img width="738" height="341" alt="GO analyse plot" src="https://github.com/user-attachments/assets/8e66ff42-615c-43fa-9028-b63aea5c0502" />
 
-`Figuur 5; Puntdiagram van de uitgevoerde GO-enrichment resultaten. Zichtbaar op de x-as is het percentage Hits van de gedetecteerde top 10 gen ID’s per GO-term. Aangegeven op de y-as staan de GO-termen, hierbij is de grootte van de punten in samenhang met het aantal genen. De kleur van ieder punt is de p-waarde, hoe donkerder hoe significanter. Hoe hoger een GO-term hoe significanter deze tot expressie komt.`
+`Figuur 4; Puntdiagram van de uitgevoerde GO-enrichment resultaten. Zichtbaar op de x-as is het percentage Hits van de gedetecteerde top 10 gen ID’s per GO-term. Aangegeven op de y-as staan de GO-termen, hierbij is de grootte van de punten in samenhang met het aantal genen. De kleur van ieder punt is de p-waarde, hoe donkerder hoe significanter. Hoe hoger een GO-term hoe significanter deze tot expressie komt.`
+
+<img width="1492" height="632" alt="Correcte pathview" src="https://github.com/user-attachments/assets/3e24040c-4504-4d3d-b974-85c7d4e2fb47" />
+
+`Figuur 5; KEGG pathway voor Reumatoïde Artitis (RA) gerendeerd met Pathview package in R-studio. Zichtbaar zijn alle betrokken eiwitten en enzymen bij RA. Bij een verhoogde differentiële expressie, zie IL6, ILS of MMP1/3, zijn de eiwitten en enzymen rood gekleurd. Bij een verlaagde differentiële expressie, zie VEGF, API en IL17, zijn de eiwitten en enzymen groen gekleurd. Bij geen verschil grijs.`
 
 
 ## 4. Conclusie
