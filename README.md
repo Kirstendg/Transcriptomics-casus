@@ -28,13 +28,13 @@ De gebruikte data is afkomstig uit een eerder onderzoek (Platzer et al., 2019). 
 | Patiënt | Leeftijd | Geslacht | Ziek of gezond | 
 | ------- | -------- | -------- | -------------- |
 | SRR4785819 | 31 | Female | Normal | 
-SRR4785820	15	Female	Normal
-SRR4785828	31	Female	Normal
-SRR4785831	42	Female	Normal
-SRR4785979	54	Female	Rheumatoid arthritis (established)
-SRR4758980	66	Female	Rheumatoid arthritis (established)
-SRR4785986	60	Female	Rheumatoid arthritis (established)
-SRR4785988	59	Female	Rheumatoid arthritis (established)
+| SRR4785820 | 15 | Female | Normal |
+| SRR4785828 | 31 | Female | Normal |
+| SRR4785831 | 42 | Female | Normal |
+| SRR4785979 | 54 | Female | Rheumatoid arthritis (established) |
+| SRR4758980 | 66 | Female | Rheumatoid arthritis (established) |
+| SRR4785986 | 60 | Female | Rheumatoid arthritis (established) |
+| SRR4785988 | 59 | Female | Rheumatoid arthritis (established) |
 
 
 
