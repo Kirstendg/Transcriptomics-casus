@@ -20,10 +20,13 @@ Langdurige onbehandelde RA kan lijden tot gewrichtsmisvormingen, functieverlies,
 De gebruikte data is afkomstig uit een eerder onderzoek (Platzer et al., 2019). Het humane referentiegenoom werd geïndexeerd met Rsubread versie 2.14.2 en de reads daarop gemapt (fig. 2) (Shi, 2022). Dit volgens standaardinstellingen van Rsubread. Resulterend zijn BAM bestanden. Met het GTF bestand GCF_000001405.40 werden reads per gen gekwantificeerd. Met DESeq2 versie 1.40.2 werd een count matrix geconstrueerd en differentiële genexpressie bepaald (Package “DESeq2,” 2025). Significante genen voldeden aan padj < 0,05. Voor visualisatie en functionele interpretatie zijn drie analyses uitgevoerd: een Volcano plot om opvallende genen te selecteren op basis van log2 fold change en bijgestelde p waarde, een KEGG padverrijkingsanalyse, gevisualiseerd met Pathview versie 1.40.0, om betrokken moleculaire routes te identificeren, en een Gene Ontology (GO) enrichmentanalyse (Bioconductor - EnhancedVolcano, n.d.; Gene Ontology Enrichment Analysis, n.d.; Title Client-Side REST Access to the Kyoto Encyclopedia of Genes and Genomes (KEGG), 2025; Maintainer & Luo, 2025). Bij GO enrichment lengtebias gecorrigeerd met goseq versie 1.52.0 en gebruikten org.Hs.eg.db versie 3.17.0 voor annotatie (hg19, geneSymbol) (Bioconductor - Goseq, n.d.; Bioconductor - Org.Hs.Eg.Db, n.d.). Overrepresentatietests werden gecorrigeerd met de Benjamini–Hochberg methode. Alle gebruikte R pakketten en versies zijn gedocumenteerd in het bijgevoegde R script.
 
 <img width="2636" height="632" alt="Flowchart transcriptomics casus RA" src="https://github.com/user-attachments/assets/d8382976-e858-4706-973e-79095677d853" />
+
 `Figuur 2; Flowchart gemaakt met Lucidchart (Diagram Software | Lucidchart, n.d.). Synoviumbiopt is uitgevoerd op vier patiënten met RA en vier gezonde patiënten. Hieruit is DNA geïsoleerd en RNA sequencing uitgevoerd om RNA-seq-data te verkrijgen. Hiernaast is het humane referentie genoom verkregen via de NCBI databank, waarna deze is geïndexeerd (National Center for Biotechnology Information, n.d.). Samples zijn gemapt tegen het geïndexeerde genoom. Reads per gen kwantificeert met BAM-files van alle patiënten en het humane GTF-file. Count matrix is gemaakt en vervolgens statistische analyses uitgevoerd (KEGG pathway, Volcano plot en GO analyse).`
 
+[Rsubread handleiding](https://subread.sourceforge.net/SubreadUsersGuide.pdf).
 
 `Tabel 1; MetaData van de verkregen data van het eerder uitgevoerde onderzoek.`
+
 
 | Patiënt | Leeftijd | Geslacht | Ziek of gezond | 
 | ------- | -------- | -------- | -------------- |
