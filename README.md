@@ -68,7 +68,3 @@ Reumatoïde Artritis (RA) is een chronische auto-immuunziekte dat pijn, irritati
 Uit analyse zijn 29407 genen geïdentificeerd, waarvan 2085 significant omhoog en 2487 significant omlaag gereguleerd waren. Na visualisatie met Volcano-plot zijn ANKRD30BL, MT-ND6 & SLC9A3R2 benadrukt met mogelijke bijdragen aan RA. KEGG- en GO-analyse tonen versterkte immuunresponsen en ontstekingsroutes, met verhoogde expressie van cytokinen IL6, IL1β en IL8 (Alturaiki et al., 2022). Verder is MMP1/3 geassocieerd met schade aan gewrichten (Green et al., 2003). De top tien gevisualiseerde GO-termen komen overeen met bekende mechanismen van RA.
 
 De gekozen drempels voor log2 fold change en padj kunnen het aantal significante genen beïnvloeden. Verdere bijdrage aan de validiteit van de gegevens is de steekproef grootte. Door het beperkte aantal samples kan de relevantie van de gevonden verschillen ter discussie staan. Daarom wordt aanbevolen de steekproef te vergroten en variatie in drempelkeuzes te onderzoeken.
-
-
-
- 
