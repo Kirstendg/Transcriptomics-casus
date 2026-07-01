@@ -2,7 +2,7 @@ GitHub gebruik tijden Transcriptomics casus
 
 
 
-Tijdens het RA project diende ik de rol van data steward op mij te nemen. Met het bouwen van mijn GitHub pagina heb ik een \[versiegeschiedenis] (https://github.com/Kirstendg/Transcriptomics-casus/commits/main/) bijgehouden. Hiernaast zijn er verschillende mappen, met eenduidige namen, aangemaakt voor: bronnen, resultaten, scripts, ruwe data.zip en data stewardship. 
+Tijdens het RA project diende ik de rol van data steward op mij te nemen. Met het bouwen van mijn GitHub pagina heb ik een \[versiegeschiedenis] (https://github.com/Kirstendg/Transcriptomics-casus/commits/main/). bijgehouden. Hiernaast zijn er verschillende mappen, met eenduidige namen, aangemaakt voor: bronnen, resultaten, scripts, ruwe data.zip en data stewardship. 
 
 
 
