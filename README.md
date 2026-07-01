@@ -13,6 +13,7 @@ Langdurige onbehandelde RA kan lijden tot gewrichtsmisvormingen, functieverlies,
 
 
 <img width="632" height="632" alt="RA plaatje" src="https://github.com/user-attachments/assets/ee521a74-b11b-472b-844a-8541c6312540" />
+
 `Figuur 1; Weergave van Reumatoïde Artitis in een hand.`
 
 ## 2. Methode
@@ -23,7 +24,10 @@ De gebruikte data is afkomstig uit een eerder onderzoek (Platzer et al., 2019). 
 
 
 `Tabel 1; MetaData van de verkregen data van het eerder uitgevoerde onderzoek.`
-SRR4785819	31	Female	Normal
+
+| Patiënt | Leeftijd | Geslacht | Ziek of gezond | 
+| ------- | -------- | -------- | -------------- |
+| SRR4785819 | 31 | Female | Normal | 
 SRR4785820	15	Female	Normal
 SRR4785828	31	Female	Normal
 SRR4785831	42	Female	Normal
